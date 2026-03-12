@@ -1,7 +1,7 @@
 import "./App.css";
-import HeadPhones from "./components/prductCard/HeadPhones";
-import Shoes from "./components/prductCard/Shoes";
-import Watch from "./components/prductCard/Watch";
+import HeadPhones from "./components/HeadPhones";
+import Shoes from "./components/Shoes";
+import Watch from "./components/Watch";
 
 const products = [
   {
