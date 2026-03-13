@@ -1,7 +1,6 @@
 import "./App.css";
-import HeadPhones from "./components/HeadPhones";
-import Shoes from "./components/Shoes";
-import Watch from "./components/Watch";
+import ProductCard from "./components/ProductCard/ProductCard";
+
 
 const products = [
   {
@@ -9,21 +8,21 @@ const products = [
     name: "Wireless Headphones",
     price: "1999",
     category: "Electronics",
-    image: "<any headphone image url>",
+    image: "https://avstore.in/cdn/shop/files/1.AVStore-Sonos-Ace-Front-Angled-View-Hero-Black.jpg?v=1725620870",
   },
   {
     id: 2,
     name: "Smart Watch",
     price: "2999",
     category: "Gadgets",
-    image: "<any smartwatch image url>",
+    image: "https://ddfndelma2gpn.cloudfront.net/color/1591/oraimo_watch_5_black_1.webp",
   },
   {
     id: 3,
     name: "Running Shoes",
     price: "2499",
     category: "Fashion",
-    image: "<any shoes image url>",
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
   },
 ];
 
@@ -32,9 +31,12 @@ const App = () => {
     <>
       <h1>Our Products</h1>
       <div className="container">
-        <HeadPhones products = {products}/>
-        <Watch products = {products}/>
-        <Shoes products = {products}/>
+        
+       {products.map((product, index) => (
+        <ProductCard key={index} product={product} />
+      ))}
+
+
       </div>
     </>
   );
