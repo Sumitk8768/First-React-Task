@@ -1,6 +1,5 @@
 
 const ProductCard = ({product}) => {
-  {console.log(product)}
   return (
     <div className="card">
        <img src={product.image} alt="" />
